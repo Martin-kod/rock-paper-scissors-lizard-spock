@@ -16,26 +16,28 @@
     <p>Choose Rock, Paper, Scissors, Lizard or Spock and see if you can beat the computer!</p>
 
     <div id="buttons">
-        <button aria-label="Rock" data-type="0">Rock</button>
-        <button aria-label="Paper" data-type="1">Paper</button>
-        <button aria-label="Scissors" data-type="2">Scissors</button>
-        <button aria-label="Lizard" data-type="3">Lizard</button>
-        <button aria-label="Spock" data-type="4">Spock</button>
+        <button aria-label="Rock" data-type="0" class="buttons">Rock</button>
+        <button aria-label="Paper" data-type="1" class="buttons">Paper</button>
+        <button aria-label="Scissors" data-type="2" class="buttons">Scissors</button>
+        <button aria-label="Lizard" data-type="3" class="buttons">Lizard</button>
+        <button aria-label="Spock" data-type="4" class="buttons">Spock</button>
     </div>
 
     <div id="game-area">
 
         <div class="image-holder" id="player-area">
             <h3>Player score: <span id="player-score">0</span></h3>
-            <img src="assets/images/groupimage.jpg" alt="Rock, Paper, Scissors, Lizard, Spock">
+            <img id="player-image" src="assets/images/groupimage.jpg" alt="Rock, Paper, Scissors, Lizard, Spock">
         </div>
 
         <div class="image-holder" id="computer-area">
             <h3>Computer score: <span id="computer-score">0</span></h3>
-            <img src="assets/images/groupimage.jpg" alt="Rock, Paper, Scissors, Lizard, Spock">
+            <img id="computer-image" src="assets/images/groupimage.jpg" alt="Rock, Paper, Scissors, Lizard, Spock">
         </div>
 
     </div>
+
+    <div id="message-area"></div>
 
 
 <script src="assets/js/script.js"></script>

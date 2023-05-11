@@ -10,8 +10,8 @@ h2 {
 }
 
 #game-area {
-    height: 50vh;
-    width: 60%;
+
+    width: 80%;
     background-color: #f6f6f6;
     margin-top: 2%;
     margin-left: auto;
@@ -30,6 +30,7 @@ h2 {
 #player-area img {
     max-width: 100%;
     height: auto;
+    border-radius: 50%;
 }
 
 #computer-area {
@@ -39,6 +40,7 @@ h2 {
 #computer-area img {
     max-width: 100%;
     height: auto;
+    border-radius: 50%;
 }
 
 #player-score {
@@ -47,4 +49,9 @@ h2 {
 
 #computer-score {
     color: lightcoral;
+}
+
+#message-area {
+    height: 1rem;
+    margin-top: 1%;
 }
