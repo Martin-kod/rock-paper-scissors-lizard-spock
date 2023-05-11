@@ -2,9 +2,32 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
 h2 {
-    text-align: center;
     font-family: 'Kavoon', cursive;
+}
+
+#game-area {
+    height: 50vh;
+    width: 60%;
+    background-color: aqua;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-holder {
+    width: 45%;
+    height: 100%;
+    background-color: blueviolet;
+}
+
+#player-area {
+    float: left;
+}
+
+#computer-area {
+    float: right;
 }
