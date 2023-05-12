@@ -25,9 +25,69 @@ function runGame(playerChoice) {
     computerImage.src = `assets/images/${choice[computerChoice]}.png`;
     computerImage.alt = choice[computerChoice];
 
-    let result = checkWinner(choice[computerChoice], choice[playerChoice]);
-
-    updateScores(result)
+    let result = checkWinner(choice[playerChoice], choice[computerChoice]);
+    message.textContent = result;
+    updateScores(result);
 }
 
-function checkWinner(choice[computerChoice], choice[playerChoice])
+function checkWinner(choice1, choice2) {
+    
+    if (choice1 === choice2) {
+        return "draw";
+    } else if (choice1 === "rock") {
+        if (choice2 === "scissors") {
+            return "player wins";
+        } else if (choice2 === "lizard") {
+            return "player wins";
+        } else {
+            return "computer wins";
+        }
+    } else if (choice1 === "paper") {
+        if (choice2 === "spock") {
+            return "player wins";
+        } else if (choice2 === "rock") {
+            return "player wins";
+        } else {
+            return "computer wins";
+        }
+    } else if (choice1 === "scissors") {
+        if (choice2 === "paper") {
+            return "player wins";
+        } else if (choice2 === "lizard") {
+            return "player wins";
+        } else {
+            return "computer wins";
+        }
+    } else if (choice1 === "lizard") {
+        if (choice2 === "spock") {
+            return "player wins";
+        } else if (choice2 === "paper") {
+            return "player wins";
+        } else {
+            return "computer wins";
+        }
+    } else if (choice1 === "spock") {
+        if (choice2 === "rock") {
+            return "player wins";
+        } else if (choice2 === "scissors") {
+            return "player wins";
+        } else {
+            return "computer wins";
+        } 
+    } else {
+        return "invalid result";
+    }
+
+}
+
+function updateScores() {
+
+    if (result === "draw") {
+        playerScore = ++playerScore;
+    } else if (result === "computer wins") {
+        computerScore = ++computerScore;
+    } else {
+        console.log("invalid result");
+    }
+
+}
