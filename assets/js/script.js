@@ -1,3 +1,7 @@
+/**
+ * Declare constants for DOM elements
+ * and possible choices
+ */
 const buttons = document.getElementsByClassName("buttons");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
@@ -6,6 +10,9 @@ const computerImage = document.getElementById("computer-image");
 const message = document.getElementById("message-area");
 const choice = ["rock", "paper", "scissors", "lizard", "spock"];
 
+/**
+ * Add eventListeners to all buttons
+ */
 document.addEventListener("DOMContentLoaded", function() {
     for (let button of buttons) {
         button.addEventListener("click", function() {
@@ -15,6 +22,10 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 });
 
+/**
+ * Main game function which accepts one parameter,
+ * the data-type of the selected button
+ */
 function runGame(playerChoice) {
 
     playerImage.src = `assets/images/${choice[playerChoice]}.png`;
@@ -30,6 +41,12 @@ function runGame(playerChoice) {
     updateScores(result);
 }
 
+/**
+ * Checks to see who the winner is, accepts two strings 
+ * which are logically checked, first if the strings are the same,
+ * then according to whether the player chooses "rock", "paper", 
+ * "scissors", "lizard" or "spock" respectively
+ */
 function checkWinner(choice1, choice2) {
     
     if (choice1 === choice2) {
@@ -81,6 +98,10 @@ function checkWinner(choice1, choice2) {
 
 }
 
+/**
+ * Updates the score, accepts a string as parameter and changes
+ * playerScore or computerScore according to it
+ */
 function updateScores(scoring) {
 
     if (scoring === "draw") {
@@ -92,7 +113,8 @@ function updateScores(scoring) {
         let oldPlayerScore = playerScore.innerText;
         playerScore.innerText = ++oldPlayerScore;
     } else {
-        console.log("invalid result");
+        alert("Unkown scoring");
+        throw "Unkown scoring. Aborting";
     }
 
 }
