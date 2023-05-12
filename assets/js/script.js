@@ -75,17 +75,22 @@ function checkWinner(choice1, choice2) {
             return "computer wins";
         } 
     } else {
-        return "invalid result";
+        alert("Unkown result");
+        throw "Unkown result. Aborting";
     }
 
 }
 
-function updateScores() {
+function updateScores(scoring) {
 
-    if (result === "draw") {
-        playerScore = ++playerScore;
-    } else if (result === "computer wins") {
-        computerScore = ++computerScore;
+    if (scoring === "draw") {
+        
+    } else if (scoring === "computer wins") {
+        let oldComputerScore = computerScore.innerText;
+        computerScore.innerText = ++oldComputerScore;
+    } else if (scoring === "player wins") {
+        let oldPlayerScore = playerScore.innerText;
+        playerScore.innerText = ++oldPlayerScore;
     } else {
         console.log("invalid result");
     }
