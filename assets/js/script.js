@@ -3,6 +3,7 @@
  * and possible choices
  */
 const buttons = document.getElementsByClassName("buttons");
+const getRules = document.getElementById("rule-checker");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 const playerImage = document.getElementById("player-image");
@@ -20,6 +21,12 @@ document.addEventListener("DOMContentLoaded", function() {
             runGame(playerChoice);
         });
     };
+    getRules.addEventListener("click", function() {
+        playerImage.src = "assets/images/groupimage.jpg";
+        playerImage.alt = "Rock, Paper, Scissors, Lizard, Spock";
+        computerImage.src = "assets/images/groupimage.jpg";
+        computerImage.alt = "Rock, Paper, Scissors, Lizard, Spock";
+    })
 });
 
 /**
