@@ -20,13 +20,13 @@ document.addEventListener("DOMContentLoaded", function() {
             let playerChoice = this.getAttribute("data-type");
             runGame(playerChoice);
         });
-    };
+    }
     getRules.addEventListener("click", function() {
         playerImage.src = "assets/images/groupimage.jpg";
         playerImage.alt = "Rock, Paper, Scissors, Lizard, Spock";
         computerImage.src = "assets/images/groupimage.jpg";
         computerImage.alt = "Rock, Paper, Scissors, Lizard, Spock";
-    })
+    });
 });
 
 /**
